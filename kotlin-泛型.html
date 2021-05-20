@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>kotlin-泛型 | litton ishir</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="https://upload-images.jianshu.io/upload_images/1074123-dc819e68a5f3c3f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    <meta name="description" content=""Someday"sounds a lot like the thing people say when they actually mean "Never". ">
+    
+    <link rel="preload" href="/assets/css/1.styles.58afc4b7.css" as="style"><link rel="preload" href="/assets/js/app.5b687ac1.js" as="script"><link rel="preload" href="/assets/js/3.9a559813.js" as="script"><link rel="preload" href="/assets/js/34.ebabb575.js" as="script"><link rel="prefetch" href="/assets/js/0.58b532e0.js"><link rel="prefetch" href="/assets/js/10.af93e76f.js"><link rel="prefetch" href="/assets/js/11.e5b83fb5.js"><link rel="prefetch" href="/assets/js/12.962c1c34.js"><link rel="prefetch" href="/assets/js/13.04f4a43e.js"><link rel="prefetch" href="/assets/js/14.7e5d7144.js"><link rel="prefetch" href="/assets/js/15.9e1637dc.js"><link rel="prefetch" href="/assets/js/16.ea8c34b4.js"><link rel="prefetch" href="/assets/js/17.aef368c2.js"><link rel="prefetch" href="/assets/js/18.0fdc9c21.js"><link rel="prefetch" href="/assets/js/19.647e9c7b.js"><link rel="prefetch" href="/assets/js/20.5b2b833a.js"><link rel="prefetch" href="/assets/js/21.672831ec.js"><link rel="prefetch" href="/assets/js/22.6ce0c8f7.js"><link rel="prefetch" href="/assets/js/23.092f9a37.js"><link rel="prefetch" href="/assets/js/24.1e64fa47.js"><link rel="prefetch" href="/assets/js/25.954d07dd.js"><link rel="prefetch" href="/assets/js/26.01b668c2.js"><link rel="prefetch" href="/assets/js/27.5cbb307f.js"><link rel="prefetch" href="/assets/js/28.09d095cc.js"><link rel="prefetch" href="/assets/js/29.3027f83a.js"><link rel="prefetch" href="/assets/js/30.a982243b.js"><link rel="prefetch" href="/assets/js/31.fcd37d2c.js"><link rel="prefetch" href="/assets/js/32.d2dedbc4.js"><link rel="prefetch" href="/assets/js/33.bebc1ba6.js"><link rel="prefetch" href="/assets/js/35.d82e0491.js"><link rel="prefetch" href="/assets/js/36.8501289b.js"><link rel="prefetch" href="/assets/js/37.9f4c0a5d.js"><link rel="prefetch" href="/assets/js/38.90781ccb.js"><link rel="prefetch" href="/assets/js/39.38253aca.js"><link rel="prefetch" href="/assets/js/4.5d06848d.js"><link rel="prefetch" href="/assets/js/40.09187989.js"><link rel="prefetch" href="/assets/js/41.85df326a.js"><link rel="prefetch" href="/assets/js/42.a832e60d.js"><link rel="prefetch" href="/assets/js/43.1e3c87ef.js"><link rel="prefetch" href="/assets/js/44.7cea1c79.js"><link rel="prefetch" href="/assets/js/45.192216a9.js"><link rel="prefetch" href="/assets/js/46.f2c11f24.js"><link rel="prefetch" href="/assets/js/47.e3c0d57a.js"><link rel="prefetch" href="/assets/js/48.16fe64d3.js"><link rel="prefetch" href="/assets/js/5.6c57b99b.js"><link rel="prefetch" href="/assets/js/6.f694b0b5.js"><link rel="prefetch" href="/assets/js/7.c7a905cb.js"><link rel="prefetch" href="/assets/js/8.bc0ced29.js"><link rel="prefetch" href="/assets/js/9.a72dd2e1.js">
+    <link rel="stylesheet" href="/assets/css/1.styles.58afc4b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="container"><div id="head-c"><div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><h1 id="blog-name"><a href="/" class="router-link-active">
+                litton ishir
+            </a></h1> <a href="https://weibo.com/littonishir" target="_blank" class="social"><i class="fa fa-fw fa-weibo"></i></a><a href="https://github.com/littonishir" target="_blank" class="social"><i class="fa fa-fw fa-github"></i></a><a href="https://space.bilibili.com/268398214/" target="_blank" class="social"><i class="fa fa-fw fa-terminal"></i></a><a href="https://www.instagram.com/littonishir/" target="_blank" class="social"><i class="fa fa-fw fa-instagram"></i></a></div></div></div> <div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><div><article><p class="post-page-meta">Mar 29, 2017</p> <hr> <div class="content__default"><h1 id="kotlin-泛型"><a href="#kotlin-泛型" class="header-anchor">#</a> kotlin-泛型</h1> <br> <h3 id="什么是泛型"><a href="#什么是泛型" class="header-anchor">#</a> 什么是泛型?</h3> <br> <ul><li>泛化的类型或者说类型的抽象</li> <li>很多时候我们并不关心它是什么</li> <li>而关心它能做什么,这就是泛型要解决的问题.</li></ul> <br> <h3 id="如何为函数声明泛型"><a href="#如何为函数声明泛型" class="header-anchor">#</a> 如何为函数声明泛型</h3> <br>
+- 为函数声明泛型,泛型要放在函数名之前.
+<div class="language-kotlin extra-class"><pre class="language-kotlin"><code>   　<span class="token keyword">fun</span> <span class="token operator">&lt;</span> T <span class="token operator">:</span> Comparable<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token operator">&gt;</span> <span class="token function">maxOf</span><span class="token punctuation">(</span>a<span class="token operator">:</span> T<span class="token punctuation">,</span> b<span class="token operator">:</span> T<span class="token punctuation">)</span><span class="token operator">:</span> T <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">&gt;</span> b<span class="token punctuation">)</span> a <span class="token keyword">else</span> b
+    <span class="token punctuation">}</span>
+</code></pre></div><br> <h3 id="如何为类声明泛型"><a href="#如何为类声明泛型" class="header-anchor">#</a> 如何为类声明泛型</h3> <br>
+- 为类声明泛型,泛型要放在类名之后
+<div class="language-kotlin extra-class"><pre class="language-kotlin"><code>	<span class="token keyword">class</span> showText<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token keyword">val</span> i<span class="token operator">:</span> T<span class="token punctuation">,</span>  <span class="token keyword">val</span> j<span class="token operator">:</span> T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    	<span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> String <span class="token punctuation">{</span>
+        	<span class="token keyword">return</span> <span class="token string">&quot;<span class="token interpolation variable">$i</span>,<span class="token interpolation variable">$j</span>&quot;</span>
+    	<span class="token punctuation">}</span>
+</code></pre></div><br> <h4 id="泛型约束"><a href="#泛型约束" class="header-anchor">#</a> 泛型约束</h4> <ul><li>&lt; T : Comparable &lt; T &gt; &gt;</li> <li>:冒号之后指定的类型是上界,泛型T只能是Comparable &lt; T &gt;的子类.</li> <li>若没有声明,默认的上界是Any? 在尖括号中只能指定一个上界.如果同一类型参数需要多个上界,我们需要一个单独的where子句</li></ul> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code> <span class="token keyword">fun</span><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token function">maxof</span><span class="token punctuation">(</span>a<span class="token operator">:</span>T<span class="token punctuation">,</span>b<span class="token operator">:</span>T<span class="token punctuation">)</span><span class="token operator">:</span>T
+    <span class="token keyword">where</span> T<span class="token operator">:</span>Comparable<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">,</span>T<span class="token operator">:</span>Cloneable <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token operator">&gt;</span>b<span class="token punctuation">)</span> a <span class="token keyword">else</span> b
+    <span class="token punctuation">}</span>
+</code></pre></div><hr> <br> <h4 id="泛型的实现机制"><a href="#泛型的实现机制" class="header-anchor">#</a> 泛型的实现机制</h4> <br> <ul><li>何为真泛型(C#)
+<ul><li>真泛型编译前变异后,泛型都存在</li></ul></li> <li>何为伪泛型(Java,Kotlin)
+<ul><li>伪泛型只存在编译之前,编译之后就随风而去了</li></ul></li></ul> <h4 id="kotlin对于真泛型的部分实现"><a href="#kotlin对于真泛型的部分实现" class="header-anchor">#</a> Kotlin对于真泛型的部分实现</h4> <br> <ul><li>使用 inline(内联)关键字标记方法</li> <li>使用 Reifild(具体化)关键字标记泛型</li></ul> <blockquote><p>注意泛型具体化必须使用inline标记</p></blockquote> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code>   <span class="token annotation builtin">@Test</span>
+    <span class="token keyword">fun</span> <span class="token function">addition_isCorrect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Generic<span class="token operator">&lt;</span>Int<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">inline</span> <span class="token keyword">fun</span> <span class="token operator">&lt;</span><span class="token keyword">reified</span> T<span class="token operator">&gt;</span><span class="token function">Generic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>T<span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">.</span>java<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>输出结果</p> <blockquote><p>class java.lang.Integer</p></blockquote> <br> <h3 id="型变"><a href="#型变" class="header-anchor">#</a> 型变</h3> <br> <br> <h4 id="协变-out"><a href="#协变-out" class="header-anchor">#</a> 协变(out)</h4> <br> <ul><li>泛型参数为协变时,这个类型的继承关系与泛型参数的继承关系是一致的.</li> <li>kotlin中的协变(out)相当于java中的通配符 《 ?extends E 》,表示接受 T 或者 T 的子类.</li></ul> <div class="language-kt extra-class"><pre class="language-kt"><code>   		<span class="token comment">/**
+         * 协变
+         * Number是Int的父类
+         * List&lt;Number&gt;是List&lt;Int&gt;的父类
+         */</span>
+        <span class="token keyword">var</span> list<span class="token operator">:</span>List<span class="token operator">&lt;</span>Number<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token function">listOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+        <span class="token keyword">val</span> numlist<span class="token operator">:</span>List<span class="token operator">&lt;</span>Number<span class="token operator">&gt;</span> <span class="token operator">=</span> intList
+</code></pre></div><br> <h4 id="逆变-in"><a href="#逆变-in" class="header-anchor">#</a> 逆变(in)</h4> <br>
+* 泛型参数为逆变时,这个类型的继承关系与泛型参数的继承关系是相反的.
+* kotlin中的逆变(in)相当于java中的通配符《 ?super E 》,表示接受 T 或者 T 的超类.
+<div class="language-kotlin extra-class"><pre class="language-kotlin"><code>        <span class="token comment">/**
+         * 逆变
+         * Comparable&lt;Int&gt;居然是Comparable&lt;Any&gt;的父类我没有瞎吧?
+         * 你没有瞎,可是为什么会这样呢?因为是逆变呀
+         * Int的超类是Any
+         */</span>
+        <span class="token keyword">val</span> intComparable <span class="token operator">:</span> Comparable<span class="token operator">&lt;</span>Int<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token keyword">object</span> <span class="token operator">:</span> Comparable<span class="token operator">&lt;</span>Any<span class="token operator">&gt;</span><span class="token punctuation">{</span>
+            <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">compareTo</span><span class="token punctuation">(</span>other<span class="token operator">:</span> Any<span class="token punctuation">)</span><span class="token operator">:</span> Int <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token number">0</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">/**
+         * 我们看下实现,Comparable&lt;in T&gt; 
+         * 逆变(in) :泛型类型与实参的继承关系相反
+         * 这就可以解释通了
+         */</span>
+        <span class="token keyword">public</span> <span class="token keyword">interface</span> Comparable<span class="token operator">&lt;</span><span class="token keyword">in</span> T<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">public</span> <span class="token keyword">operator</span> <span class="token keyword">fun</span> <span class="token function">compareTo</span><span class="token punctuation">(</span>other<span class="token operator">:</span> T<span class="token punctuation">)</span><span class="token operator">:</span> Int
+        <span class="token punctuation">}</span>
+</code></pre></div><br> <h4 id="注意事项"><a href="#注意事项" class="header-anchor">#</a> 注意事项</h4> <br>
+* 协变点 
+	* 一提到协变你就应该想到类型是只读的
+	* 泛型参数:返回值类型
+<div class="language- extra-class"><pre><code>&gt;  对于谁只读呢?	对于泛型参数类型对应的变量时只读
+</code></pre></div><ul><li><p>逆变点</p> <ul><li>一提到逆变你就应该想到类型是只写的</li> <li>泛型参数:入参类型</li></ul> <blockquote><p>对于谁只写呢?	对于泛型参数类型对应的变量时只写</p></blockquote></li> <li><p>不变点</p> <ul><li>T</li> <li>类型是可读写的</li></ul></li> <li><p>型变点违规</p> <ul><li>使用 @UnsafeVariance 标注,让编译器闭嘴.</li></ul></li></ul> <br> <h4 id="星投影"><a href="#星投影" class="header-anchor">#</a> 星投影</h4> <br>
+有时你对类型参数一无所知,但任然希望以安全的方式使用它.星投影就是你了.
+<div class="language-kotlin extra-class"><pre class="language-kotlin"><code>        <span class="token keyword">var</span> list<span class="token operator">:</span>List<span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token function">listOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+</code></pre></div><p>注意需要泛型实参时不能使用星投影</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">//这样用可以吗当然不可以!!!!</span>
+    hello<span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div></div></article> <div class="content edit-link"><br> <a href="https://github.com/your_user/your_docs_repo/edit/master/kotlin-泛型.md" target="_blank" rel="noopener noreferrer"> </a></div> <!----></div></div></div> <center><hr width="50%"> <span id="subtitle">&quot;Someday&quot;sounds a lot like the thing people say when they actually mean &quot;Never&quot;. </span> <div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><p class="small">© 2021 litton ishir. Code released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p></div></div></center></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5b687ac1.js" defer></script><script src="/assets/js/3.9a559813.js" defer></script><script src="/assets/js/34.ebabb575.js" defer></script>
+  </body>
+</html>

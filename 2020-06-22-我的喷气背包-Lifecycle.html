@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jetpack-LifeCycle记录 | litton ishir</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="https://upload-images.jianshu.io/upload_images/1074123-dc819e68a5f3c3f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    <meta name="description" content=""Someday"sounds a lot like the thing people say when they actually mean "Never". ">
+    
+    <link rel="preload" href="/assets/css/1.styles.58afc4b7.css" as="style"><link rel="preload" href="/assets/js/app.5b687ac1.js" as="script"><link rel="preload" href="/assets/js/3.9a559813.js" as="script"><link rel="preload" href="/assets/js/13.04f4a43e.js" as="script"><link rel="prefetch" href="/assets/js/0.58b532e0.js"><link rel="prefetch" href="/assets/js/10.af93e76f.js"><link rel="prefetch" href="/assets/js/11.e5b83fb5.js"><link rel="prefetch" href="/assets/js/12.962c1c34.js"><link rel="prefetch" href="/assets/js/14.7e5d7144.js"><link rel="prefetch" href="/assets/js/15.9e1637dc.js"><link rel="prefetch" href="/assets/js/16.ea8c34b4.js"><link rel="prefetch" href="/assets/js/17.aef368c2.js"><link rel="prefetch" href="/assets/js/18.0fdc9c21.js"><link rel="prefetch" href="/assets/js/19.647e9c7b.js"><link rel="prefetch" href="/assets/js/20.5b2b833a.js"><link rel="prefetch" href="/assets/js/21.672831ec.js"><link rel="prefetch" href="/assets/js/22.6ce0c8f7.js"><link rel="prefetch" href="/assets/js/23.092f9a37.js"><link rel="prefetch" href="/assets/js/24.1e64fa47.js"><link rel="prefetch" href="/assets/js/25.954d07dd.js"><link rel="prefetch" href="/assets/js/26.01b668c2.js"><link rel="prefetch" href="/assets/js/27.5cbb307f.js"><link rel="prefetch" href="/assets/js/28.09d095cc.js"><link rel="prefetch" href="/assets/js/29.3027f83a.js"><link rel="prefetch" href="/assets/js/30.a982243b.js"><link rel="prefetch" href="/assets/js/31.fcd37d2c.js"><link rel="prefetch" href="/assets/js/32.d2dedbc4.js"><link rel="prefetch" href="/assets/js/33.bebc1ba6.js"><link rel="prefetch" href="/assets/js/34.ebabb575.js"><link rel="prefetch" href="/assets/js/35.d82e0491.js"><link rel="prefetch" href="/assets/js/36.8501289b.js"><link rel="prefetch" href="/assets/js/37.9f4c0a5d.js"><link rel="prefetch" href="/assets/js/38.90781ccb.js"><link rel="prefetch" href="/assets/js/39.38253aca.js"><link rel="prefetch" href="/assets/js/4.5d06848d.js"><link rel="prefetch" href="/assets/js/40.09187989.js"><link rel="prefetch" href="/assets/js/41.85df326a.js"><link rel="prefetch" href="/assets/js/42.a832e60d.js"><link rel="prefetch" href="/assets/js/43.1e3c87ef.js"><link rel="prefetch" href="/assets/js/44.7cea1c79.js"><link rel="prefetch" href="/assets/js/45.192216a9.js"><link rel="prefetch" href="/assets/js/46.f2c11f24.js"><link rel="prefetch" href="/assets/js/47.e3c0d57a.js"><link rel="prefetch" href="/assets/js/48.16fe64d3.js"><link rel="prefetch" href="/assets/js/5.6c57b99b.js"><link rel="prefetch" href="/assets/js/6.f694b0b5.js"><link rel="prefetch" href="/assets/js/7.c7a905cb.js"><link rel="prefetch" href="/assets/js/8.bc0ced29.js"><link rel="prefetch" href="/assets/js/9.a72dd2e1.js">
+    <link rel="stylesheet" href="/assets/css/1.styles.58afc4b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="container"><div id="head-c"><div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><h1 id="blog-name"><a href="/" class="router-link-active">
+                litton ishir
+            </a></h1> <a href="https://weibo.com/littonishir" target="_blank" class="social"><i class="fa fa-fw fa-weibo"></i></a><a href="https://github.com/littonishir" target="_blank" class="social"><i class="fa fa-fw fa-github"></i></a><a href="https://space.bilibili.com/268398214/" target="_blank" class="social"><i class="fa fa-fw fa-terminal"></i></a><a href="https://www.instagram.com/littonishir/" target="_blank" class="social"><i class="fa fa-fw fa-instagram"></i></a></div></div></div> <div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><div><article><p class="post-page-meta">May 20, 2021</p> <hr> <div class="content__default"><h1 id="jetpack-lifecycle记录"><a href="#jetpack-lifecycle记录" class="header-anchor">#</a> Jetpack-LifeCycle记录</h1> <p>初次见到这个心仪的男人，她就假装扭脚碰洒了一杯水，男人衬衫湿了大半，然后一眼看到始作俑者的明眸皓齿和俏皮笑容，呆在当场。</p> <blockquote><p>感知生命周期。</p></blockquote> <h2 id="_1-lifecycle创建"><a href="#_1-lifecycle创建" class="header-anchor">#</a> 1. LifeCycle创建</h2> <p>新建一个类实现LifecycleObserver接口，接下来就可以定义方法为所欲为了。</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">package</span> com<span class="token punctuation">.</span>litton<span class="token punctuation">.</span>myjetpack<span class="token punctuation">.</span>lifecycle
+
+<span class="token keyword">import</span> androidx<span class="token punctuation">.</span>lifecycle<span class="token punctuation">.</span>Lifecycle
+<span class="token keyword">import</span> androidx<span class="token punctuation">.</span>lifecycle<span class="token punctuation">.</span>LifecycleObserver
+<span class="token keyword">import</span> androidx<span class="token punctuation">.</span>lifecycle<span class="token punctuation">.</span>OnLifecycleEvent
+<span class="token keyword">import</span> timber<span class="token punctuation">.</span>log<span class="token punctuation">.</span>Timber
+
+
+<span class="token comment">/**
+ * Created by littonishir on 2020/6/22.
+ */</span>
+<span class="token keyword">class</span> <span class="token function">MyLifecycle</span><span class="token punctuation">(</span><span class="token keyword">val</span> lifecycle<span class="token operator">:</span> Lifecycle<span class="token punctuation">)</span> <span class="token operator">:</span> LifecycleObserver <span class="token punctuation">{</span>
+
+    <span class="token comment">/**
+     * 将Lifecycle对象传进来，
+     * 我们就可以在任何地方主动来获取当前的生命周期状态。
+     * Lifecycle.State 是一个枚举类型，共如下五种状态类型。
+     */</span>
+    <span class="token keyword">fun</span> <span class="token function">getCurrentState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">when</span> <span class="token punctuation">(</span>lifecycle<span class="token punctuation">.</span>currentState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Lifecycle<span class="token punctuation">.</span>State<span class="token punctuation">.</span>INITIALIZED <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;INITIALIZED&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            Lifecycle<span class="token punctuation">.</span>State<span class="token punctuation">.</span>CREATED <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;CREATED&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            Lifecycle<span class="token punctuation">.</span>State<span class="token punctuation">.</span>STARTED <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;STARTED&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            Lifecycle<span class="token punctuation">.</span>State<span class="token punctuation">.</span>RESUMED <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;RESUMED&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+            Lifecycle<span class="token punctuation">.</span>State<span class="token punctuation">.</span>DESTROYED <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+                Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;DESTROYED&quot;</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Lifecycle.Event 是一个枚举类型，共七种状态类型
+     * 这里展示了六种，Lifecycle.Event.ON_ANY 可以匹配任何生命周期回调。
+     */</span>
+    <span class="token annotation builtin">@OnLifecycleEvent</span><span class="token punctuation">(</span>Lifecycle<span class="token punctuation">.</span>Event<span class="token punctuation">.</span>ON_CREATE<span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;ON_CREATE&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation builtin">@OnLifecycleEvent</span><span class="token punctuation">(</span>Lifecycle<span class="token punctuation">.</span>Event<span class="token punctuation">.</span>ON_START<span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;ON_START&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation builtin">@OnLifecycleEvent</span><span class="token punctuation">(</span>Lifecycle<span class="token punctuation">.</span>Event<span class="token punctuation">.</span>ON_RESUME<span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">resume</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;ON_RESUME&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation builtin">@OnLifecycleEvent</span><span class="token punctuation">(</span>Lifecycle<span class="token punctuation">.</span>Event<span class="token punctuation">.</span>ON_PAUSE<span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;ON_PAUSE&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation builtin">@OnLifecycleEvent</span><span class="token punctuation">(</span>Lifecycle<span class="token punctuation">.</span>Event<span class="token punctuation">.</span>ON_STOP<span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;ON_STOP&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation builtin">@OnLifecycleEvent</span><span class="token punctuation">(</span>Lifecycle<span class="token punctuation">.</span>Event<span class="token punctuation">.</span>ON_DESTROY<span class="token punctuation">)</span>
+    <span class="token keyword">fun</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Timber<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span><span class="token string">&quot;ON_DESTROY&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_2-lifecycle使用"><a href="#_2-lifecycle使用" class="header-anchor">#</a> 2. LifeCycle使用</h2> <p>只要添加一行这样的代码lifecycle.addObserver( )，MyLifecycle就可以感知生命周期了。</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">class</span> MyLifecycleActivity <span class="token operator">:</span> <span class="token function">AppCompatActivity</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token operator">:</span> Bundle<span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span>
+        <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_lifecycle_test<span class="token punctuation">)</span>
+        <span class="token comment">//界面时长记录</span>
+        lifecycle<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>mChronometer<span class="token punctuation">)</span>
+        <span class="token comment">//lifecycle示例</span>
+        lifecycle<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span><span class="token function">MyLifecycle</span><span class="token punctuation">(</span>lifecycle<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="晓示例"><a href="#晓示例" class="header-anchor">#</a> 晓示例</h2> <ol><li>计时器控件</li></ol> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code>   <span class="token keyword">package</span> com<span class="token punctuation">.</span>litton<span class="token punctuation">.</span>myjetpack<span class="token punctuation">.</span>lifecycle
+   
+   <span class="token keyword">import</span> android<span class="token punctuation">.</span>content<span class="token punctuation">.</span>Context
+   <span class="token keyword">import</span> android<span class="token punctuation">.</span>os<span class="token punctuation">.</span>SystemClock
+   <span class="token keyword">import</span> android<span class="token punctuation">.</span>util<span class="token punctuation">.</span>AttributeSet
+   <span class="token keyword">import</span> android<span class="token punctuation">.</span>widget<span class="token punctuation">.</span>Chronometer
+   <span class="token keyword">import</span> androidx<span class="token punctuation">.</span>lifecycle<span class="token punctuation">.</span>Lifecycle
+   <span class="token keyword">import</span> androidx<span class="token punctuation">.</span>lifecycle<span class="token punctuation">.</span>LifecycleObserver
+   <span class="token keyword">import</span> androidx<span class="token punctuation">.</span>lifecycle<span class="token punctuation">.</span>OnLifecycleEvent
+   
+   
+   <span class="token comment">/**
+    * 计时器控件（带有生命周期感应）
+    * 记录界面显示时长，只有控件在前台显示时记录时长。
+    * Created by littonishir on 2020/6/22.
+    */</span>
+   <span class="token keyword">class</span> <span class="token function">CharonX</span><span class="token punctuation">(</span>context<span class="token operator">:</span> Context<span class="token operator">?</span><span class="token punctuation">,</span> attrs<span class="token operator">:</span> AttributeSet<span class="token operator">?</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">Chronometer</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> attrs<span class="token punctuation">)</span><span class="token punctuation">,</span>
+       LifecycleObserver <span class="token punctuation">{</span>
+       <span class="token keyword">private</span> <span class="token keyword">var</span> elapsedTime <span class="token operator">=</span> <span class="token number">0L</span>
+   
+       <span class="token annotation builtin">@OnLifecycleEvent</span><span class="token punctuation">(</span>Lifecycle<span class="token punctuation">.</span>Event<span class="token punctuation">.</span>ON_RESUME<span class="token punctuation">)</span>
+       <span class="token keyword">private</span> <span class="token keyword">fun</span> <span class="token function">resume</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           <span class="token function">setBase</span><span class="token punctuation">(</span>SystemClock<span class="token punctuation">.</span><span class="token function">elapsedRealtime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> elapsedTime<span class="token punctuation">)</span>
+           <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+       <span class="token punctuation">}</span>
+   
+       <span class="token annotation builtin">@OnLifecycleEvent</span><span class="token punctuation">(</span>Lifecycle<span class="token punctuation">.</span>Event<span class="token punctuation">.</span>ON_PAUSE<span class="token punctuation">)</span>
+       <span class="token keyword">private</span> <span class="token keyword">fun</span> <span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           elapsedTime <span class="token operator">=</span> SystemClock<span class="token punctuation">.</span><span class="token function">elapsedRealtime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> base
+           <span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li></li></ol> <p>持续更新中...</p></div></article> <div class="content edit-link"><br> <a href="https://github.com/your_user/your_docs_repo/edit/master/2020-06-22-我的喷气背包-Lifecycle.md" target="_blank" rel="noopener noreferrer"> </a></div> <!----></div></div></div> <center><hr width="50%"> <span id="subtitle">&quot;Someday&quot;sounds a lot like the thing people say when they actually mean &quot;Never&quot;. </span> <div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><p class="small">© 2021 litton ishir. Code released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p></div></div></center></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5b687ac1.js" defer></script><script src="/assets/js/3.9a559813.js" defer></script><script src="/assets/js/13.04f4a43e.js" defer></script>
+  </body>
+</html>

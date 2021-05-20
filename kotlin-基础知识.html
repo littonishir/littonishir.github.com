@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>kotlin-基础知识 | litton ishir</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="https://upload-images.jianshu.io/upload_images/1074123-dc819e68a5f3c3f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+    <meta name="description" content=""Someday"sounds a lot like the thing people say when they actually mean "Never". ">
+    
+    <link rel="preload" href="/assets/css/1.styles.58afc4b7.css" as="style"><link rel="preload" href="/assets/js/app.5b687ac1.js" as="script"><link rel="preload" href="/assets/js/3.9a559813.js" as="script"><link rel="preload" href="/assets/js/33.bebc1ba6.js" as="script"><link rel="prefetch" href="/assets/js/0.58b532e0.js"><link rel="prefetch" href="/assets/js/10.af93e76f.js"><link rel="prefetch" href="/assets/js/11.e5b83fb5.js"><link rel="prefetch" href="/assets/js/12.962c1c34.js"><link rel="prefetch" href="/assets/js/13.04f4a43e.js"><link rel="prefetch" href="/assets/js/14.7e5d7144.js"><link rel="prefetch" href="/assets/js/15.9e1637dc.js"><link rel="prefetch" href="/assets/js/16.ea8c34b4.js"><link rel="prefetch" href="/assets/js/17.aef368c2.js"><link rel="prefetch" href="/assets/js/18.0fdc9c21.js"><link rel="prefetch" href="/assets/js/19.647e9c7b.js"><link rel="prefetch" href="/assets/js/20.5b2b833a.js"><link rel="prefetch" href="/assets/js/21.672831ec.js"><link rel="prefetch" href="/assets/js/22.6ce0c8f7.js"><link rel="prefetch" href="/assets/js/23.092f9a37.js"><link rel="prefetch" href="/assets/js/24.1e64fa47.js"><link rel="prefetch" href="/assets/js/25.954d07dd.js"><link rel="prefetch" href="/assets/js/26.01b668c2.js"><link rel="prefetch" href="/assets/js/27.5cbb307f.js"><link rel="prefetch" href="/assets/js/28.09d095cc.js"><link rel="prefetch" href="/assets/js/29.3027f83a.js"><link rel="prefetch" href="/assets/js/30.a982243b.js"><link rel="prefetch" href="/assets/js/31.fcd37d2c.js"><link rel="prefetch" href="/assets/js/32.d2dedbc4.js"><link rel="prefetch" href="/assets/js/34.ebabb575.js"><link rel="prefetch" href="/assets/js/35.d82e0491.js"><link rel="prefetch" href="/assets/js/36.8501289b.js"><link rel="prefetch" href="/assets/js/37.9f4c0a5d.js"><link rel="prefetch" href="/assets/js/38.90781ccb.js"><link rel="prefetch" href="/assets/js/39.38253aca.js"><link rel="prefetch" href="/assets/js/4.5d06848d.js"><link rel="prefetch" href="/assets/js/40.09187989.js"><link rel="prefetch" href="/assets/js/41.85df326a.js"><link rel="prefetch" href="/assets/js/42.a832e60d.js"><link rel="prefetch" href="/assets/js/43.1e3c87ef.js"><link rel="prefetch" href="/assets/js/44.7cea1c79.js"><link rel="prefetch" href="/assets/js/45.192216a9.js"><link rel="prefetch" href="/assets/js/46.f2c11f24.js"><link rel="prefetch" href="/assets/js/47.e3c0d57a.js"><link rel="prefetch" href="/assets/js/48.16fe64d3.js"><link rel="prefetch" href="/assets/js/5.6c57b99b.js"><link rel="prefetch" href="/assets/js/6.f694b0b5.js"><link rel="prefetch" href="/assets/js/7.c7a905cb.js"><link rel="prefetch" href="/assets/js/8.bc0ced29.js"><link rel="prefetch" href="/assets/js/9.a72dd2e1.js">
+    <link rel="stylesheet" href="/assets/css/1.styles.58afc4b7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="container"><div id="head-c"><div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><h1 id="blog-name"><a href="/" class="router-link-active">
+                litton ishir
+            </a></h1> <a href="https://weibo.com/littonishir" target="_blank" class="social"><i class="fa fa-fw fa-weibo"></i></a><a href="https://github.com/littonishir" target="_blank" class="social"><i class="fa fa-fw fa-github"></i></a><a href="https://space.bilibili.com/268398214/" target="_blank" class="social"><i class="fa fa-fw fa-terminal"></i></a><a href="https://www.instagram.com/littonishir/" target="_blank" class="social"><i class="fa fa-fw fa-instagram"></i></a></div></div></div> <div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><div><article><p class="post-page-meta">Mar 25, 2017</p> <hr> <div class="content__default"><h1 id="kotlin-基础知识"><a href="#kotlin-基础知识" class="header-anchor">#</a> kotlin-基础知识</h1> <p><strong>在kotlin中不再区分基本数据类型和装箱数据类型,在需要的时候编译器会自动帮我们选择</strong></p> <ul><li><p>Boolean</p></li> <li><p>Number</p> <ul><li>整形
+<ul><li>Short</li> <li>Int</li> <li>Long</li></ul></li> <li>浮点型
+<ul><li>Float</li> <li>Double</li></ul></li> <li>字节
+<ul><li>Byte</li></ul></li></ul></li> <li><p>Char</p></li> <li><p>String</p></li></ul> <h3 id="boolean"><a href="#boolean" class="header-anchor">#</a> Boolean</h3> <br> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">val</span> b1 <span class="token operator">:</span> Boolean <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token keyword">val</span> b2 <span class="token operator">:</span> Boolean <span class="token operator">=</span> <span class="token boolean">false</span>
+</code></pre></div> <br> <h3 id="number"><a href="#number" class="header-anchor">#</a> Number</h3> <p>Number主要包括整形和浮点型</p> <p>整型</p> <ul><li>Short 16位宽</li> <li>Int   32位宽</li> <li>Long  64位宽</li></ul> <p>浮点型</p> <ul><li>Double 64位宽</li> <li>Float  32位宽</li></ul> <p>字节</p> <ul><li>Byte 8位宽</li></ul> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">val</span> anInt<span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">8</span>
+<span class="token keyword">val</span> anotherInt<span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">0xFF</span>
+<span class="token keyword">val</span> moreInt<span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">0b00000011</span>
+<span class="token comment">//MAX_VALUE MIN_VALUE均是数字的属性可直接取到</span>
+<span class="token comment">//MAX_VALUE = 2的31次方减一(因为有一位是符号位)</span>
+<span class="token keyword">val</span> maxInt<span class="token operator">:</span> Int <span class="token operator">=</span> Int<span class="token punctuation">.</span>MAX_VALUE <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span><span class="token number">31.0</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span>
+<span class="token keyword">val</span> minInt<span class="token operator">:</span> Int <span class="token operator">=</span> Int<span class="token punctuation">.</span>MIN_VALUE <span class="token operator">=</span> <span class="token operator">-</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span><span class="token number">31.0</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span>
+
+<span class="token keyword">val</span> aLong<span class="token operator">:</span> Long <span class="token operator">=</span> <span class="token number">12368172397127391</span>
+<span class="token keyword">val</span> another<span class="token operator">:</span> Long <span class="token operator">=</span> <span class="token number">123</span>
+<span class="token keyword">val</span> maxLong<span class="token operator">:</span> Long <span class="token operator">=</span> Long<span class="token punctuation">.</span>MAX_VALUE
+<span class="token keyword">val</span> minLong<span class="token operator">:</span> Long <span class="token operator">=</span> Long<span class="token punctuation">.</span>MIN_VALUE
+
+<span class="token comment">//2.0默认是Double类型 若想将2.0赋值给一个Float需要在其后面加F</span>
+<span class="token keyword">val</span> aFloat<span class="token operator">:</span> Float <span class="token operator">=</span> <span class="token number">2.0F</span>
+<span class="token keyword">val</span> anotherFloat<span class="token operator">:</span> Float <span class="token operator">=</span> <span class="token number">1E3f</span><span class="token comment">//1*10^3</span>
+<span class="token keyword">val</span> maxFloat<span class="token operator">:</span> Float <span class="token operator">=</span> Float<span class="token punctuation">.</span>MAX_VALUE
+<span class="token keyword">val</span> minFloat<span class="token operator">:</span> Float <span class="token operator">=</span> <span class="token operator">-</span>Float<span class="token punctuation">.</span>MAX_VALUE
+
+<span class="token keyword">val</span> aDouble<span class="token operator">:</span> Double <span class="token operator">=</span> <span class="token number">3.0</span>
+<span class="token keyword">val</span> anotherDouble<span class="token operator">:</span> Double <span class="token operator">=</span> <span class="token number">3.1415926</span>
+<span class="token keyword">val</span> maxDouble<span class="token operator">:</span> Double<span class="token operator">=</span> Double<span class="token punctuation">.</span>MAX_VALUE
+<span class="token keyword">val</span> minDouble<span class="token operator">:</span> Double<span class="token operator">=</span> <span class="token operator">-</span>Double<span class="token punctuation">.</span>MAX_VALUE
+
+<span class="token keyword">val</span> aShort<span class="token operator">:</span> Short <span class="token operator">=</span> <span class="token number">127</span>
+<span class="token keyword">val</span> maxShort<span class="token operator">:</span> Short <span class="token operator">=</span> Short<span class="token punctuation">.</span>MAX_VALUE
+<span class="token keyword">val</span> minShort<span class="token operator">:</span> Short <span class="token operator">=</span> Short<span class="token punctuation">.</span>MIN_VALUE
+
+<span class="token keyword">val</span> maxByte<span class="token operator">:</span> Byte <span class="token operator">=</span> Byte<span class="token punctuation">.</span>MAX_VALUE
+<span class="token keyword">val</span> minByte<span class="token operator">:</span> Byte <span class="token operator">=</span> Byte<span class="token punctuation">.</span>MIN_VALUE
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;16进制:&quot;</span><span class="token operator">+</span>anotherInt<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;2进制:&quot;</span><span class="token operator">+</span>moreInt<span class="token punctuation">)</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Int最大值:&quot;</span><span class="token operator">+</span>maxInt<span class="token punctuation">)</span>
+    <span class="token comment">//Int最大值取值范围</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">31.0</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Int最小值:&quot;</span><span class="token operator">+</span>minInt<span class="token punctuation">)</span>
+    <span class="token comment">//Int最小值取值范围</span>
+    <span class="token function">println</span><span class="token punctuation">(</span> <span class="token operator">-</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">31.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Long最大值:&quot;</span><span class="token operator">+</span>maxLong<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">63.0</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Long最小值:&quot;</span><span class="token operator">+</span>minLong<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token operator">-</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">63.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Float:&quot;</span><span class="token operator">+</span>aFloat<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;1*10^3:&quot;</span><span class="token operator">+</span>anotherFloat<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Float最大值:&quot;</span><span class="token operator">+</span>maxFloat<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Float最小值:&quot;</span><span class="token operator">+</span>minFloat<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Double最大值:&quot;</span><span class="token operator">+</span>maxDouble<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Double最小值:&quot;</span><span class="token operator">+</span>minDouble<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Short最大值:&quot;</span><span class="token operator">+</span>maxShort<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Short最大值:&quot;</span><span class="token operator">+</span>minShort<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Byte最大值:&quot;</span><span class="token operator">+</span>maxByte<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;Byte最大值:&quot;</span><span class="token operator">+</span>minByte<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>打印结果</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token number">16</span>进制<span class="token operator">:</span><span class="token number">255</span>
+<span class="token number">2</span>进制<span class="token operator">:</span><span class="token number">3</span>
+Int最大值<span class="token operator">:</span><span class="token number">2147483647</span>
+<span class="token number">2.147483647E9</span>
+Int最小值<span class="token operator">:</span><span class="token operator">-</span><span class="token number">2147483648</span>
+<span class="token operator">-</span><span class="token number">2.147483648E9</span>
+
+Long最大值<span class="token operator">:</span><span class="token number">9223372036854775807</span>
+<span class="token number">9.223372036854776E18</span>
+Long最小值<span class="token operator">:</span><span class="token operator">-</span><span class="token number">9223372036854775808</span>
+<span class="token operator">-</span><span class="token number">9.223372036854776E18</span>
+
+Float<span class="token operator">:</span><span class="token number">2.0</span>
+<span class="token number">1</span><span class="token operator">*</span><span class="token number">10</span>^<span class="token number">3</span><span class="token operator">:</span><span class="token number">1000.0</span>
+Float最大值<span class="token operator">:</span><span class="token number">3.4028235E38</span>
+Float最小值<span class="token operator">:</span><span class="token operator">-</span><span class="token number">3.4028235E38</span>
+
+Double最大值<span class="token operator">:</span><span class="token number">1.7976931348623157E308</span>
+Double最小值<span class="token operator">:</span><span class="token operator">-</span><span class="token number">1.7976931348623157E308</span>
+
+Short最大值<span class="token operator">:</span><span class="token number">32767</span>
+Short最大值<span class="token operator">:</span><span class="token operator">-</span><span class="token number">32768</span>
+
+Byte最大值<span class="token operator">:</span><span class="token number">127</span>
+Byte最大值<span class="token operator">:</span><span class="token operator">-</span><span class="token number">128</span>
+</code></pre></div> <br> <h3 id="char"><a href="#char" class="header-anchor">#</a> Char</h3> <p>字符</p> <ul><li>Char 16位宽</li> <li>Char占两个字节 16位宽</li> <li>Char用单引号'' 引起来,例如:'a','0','\n'</li></ul> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">val</span> aChar<span class="token operator">:</span> Char <span class="token operator">=</span> <span class="token string">'0'</span>
+<span class="token keyword">val</span> bChar<span class="token operator">:</span> Char <span class="token operator">=</span> <span class="token string">'中'</span>
+<span class="token keyword">val</span> cChar<span class="token operator">:</span> Char <span class="token operator">=</span> <span class="token string">'\u000f'</span>
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>aChar<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>bChar<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>cChar<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>打印结果</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token number">0</span>
+中
+  <span class="token comment">//这里是一个换行符</span>
+</code></pre></div><p>补充转义字符</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code> \t  制表符
+ \b  光标后退一个字符
+ \n  回车
+ \r  光标回到行首
+ \'  单引号
+ \&quot;  双引号
+ \\  反斜杠
+ \$  美元符号<span class="token punctuation">,</span>kotlin支持美元 符号开头的字符串模板
+</code></pre></div> <br> <h3 id="string"><a href="#string" class="header-anchor">#</a> String</h3> <br> <h4 id="字符串的比较"><a href="#字符串的比较" class="header-anchor">#</a> 字符串的比较</h4> <ul><li>a == b 表示比较内容,类似java的equals</li> <li>a === b 表示比较对象是否相同</li></ul> <h4 id="字符串模板"><a href="#字符串模板" class="header-anchor">#</a> 字符串模板</h4> <ul><li>$</li></ul> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">val</span> string<span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string">&quot;HelloWorld&quot;</span>
+<span class="token keyword">val</span> fromChars<span class="token operator">:</span> String <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span><span class="token function">charArrayOf</span><span class="token punctuation">(</span><span class="token string">'H'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span><span class="token string">'l'</span><span class="token punctuation">,</span><span class="token string">'l'</span><span class="token punctuation">,</span><span class="token string">'o'</span><span class="token punctuation">,</span><span class="token string">'W'</span><span class="token punctuation">,</span><span class="token string">'o'</span><span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">,</span><span class="token string">'l'</span><span class="token punctuation">,</span><span class="token string">'d'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">//charArrayOf :Char数组构建</span>
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>string <span class="token operator">==</span> fromChars<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>string <span class="token operator">===</span> fromChars<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;输出:&quot;</span> <span class="token operator">+</span> string<span class="token punctuation">)</span>
+
+    <span class="token keyword">val</span> arg1<span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">val</span> arg2<span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span> <span class="token operator">+</span> arg1 <span class="token operator">+</span> <span class="token string">&quot; + &quot;</span> <span class="token operator">+</span> arg2 <span class="token operator">+</span> <span class="token string">&quot; = &quot;</span> <span class="token operator">+</span> <span class="token punctuation">(</span>arg1 <span class="token operator">+</span> arg2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment">//字符串模板</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;<span class="token interpolation variable">$arg1</span> + <span class="token interpolation variable">$arg2</span> = <span class="token interpolation"><span class="token delimiter variable">${</span>arg1 <span class="token operator">+</span> arg2<span class="token delimiter variable">}</span></span>&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment">//Hello &quot;Trump&quot;</span>
+    <span class="token keyword">val</span> sayHello <span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string">&quot;Hello \&quot;Trump\&quot;&quot;</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>sayHello<span class="token punctuation">)</span>
+
+    <span class="token keyword">val</span> salary<span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">1000</span>
+    <span class="token comment">//$salary:是取到salary的值</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;<span class="token interpolation variable">$salary</span>&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment">//原始字符串 原样输出字符串 转义字符也没有用(但是$还是可以用的)</span>
+    <span class="token keyword">val</span> rawString<span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>&quot;
+<span class="token comment">/*****************************/</span>
+        嘴不点而含丹
+        眉不画而横翠
+        \t
+        \n
+        \$salary
+<span class="token comment">/*****************************/</span>
+    <span class="token string">&quot;&quot;</span>&quot;
+    <span class="token function">println</span><span class="token punctuation">(</span>rawString<span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>rawString<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>打印结果</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token boolean">true</span>
+<span class="token boolean">false</span>
+输出<span class="token operator">:</span>HelloWorld
+<span class="token number">0</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token number">0</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">=</span> <span class="token number">1</span>
+Hello <span class="token string">&quot;Trump&quot;</span>
+<span class="token number">1000</span>
+
+<span class="token comment">/*****************************/</span>
+        嘴不点而含丹
+        眉不画而横翠
+        \t
+        \n
+        \<span class="token number">1000</span>
+<span class="token comment">/*****************************/</span>
+    
+<span class="token number">135</span>
+</code></pre></div> <br> <h3 id="基本数据类型转换"><a href="#基本数据类型转换" class="header-anchor">#</a> 基本数据类型转换</h3> <p>在kotlin中基本数据类型不可隐士转换</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">val</span> anint <span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">val</span> along <span class="token operator">:</span> Long <span class="token operator">=</span> anint<span class="token punctuation">.</span><span class="token function">toLong</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div> <br> <h3 id="类和对象"><a href="#类和对象" class="header-anchor">#</a> 类和对象</h3> <br> <h4 id="什么是对象"><a href="#什么是对象" class="header-anchor">#</a> 什么是对象?</h4> <ol><li>是一个具体的概念</li> <li>描述某一种类的具体个体</li> <li>比如某些人 车 手里的书等等</li></ol> <h4 id="什么是类"><a href="#什么是类" class="header-anchor">#</a> 什么是类?</h4> <ol><li>类是一个抽象的概念</li> <li>具有某些特征事物的概括</li> <li>不特定指代任何一个具体的事物</li></ol> <h4 id="类的继承"><a href="#类的继承" class="header-anchor">#</a> 类的继承</h4> <ol><li>提取共性 抽象父类</li> <li>子类拥有父类的一切特征</li> <li>子类可以自定义自己的特征</li> <li>所有的类都最终继承自Any</li></ol> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">class</span> 类名 <span class="token punctuation">(</span>构造方法<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">init</span><span class="token punctuation">{</span><span class="token comment">//初始化代码块}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>示例代码</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">//在kotlin中继承 要主动打开open</span>
+<span class="token keyword">open</span> <span class="token keyword">class</span> <span class="token function">person</span><span class="token punctuation">(</span><span class="token keyword">var</span> name<span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token keyword">var</span> sex<span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token keyword">var</span> voice<span class="token operator">:</span> String<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">init</span> <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;new a <span class="token interpolation"><span class="token delimiter variable">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>javaClass<span class="token punctuation">.</span>simpleName<span class="token delimiter variable">}</span></span>, name:<span class="token interpolation variable">$name</span>, sex:<span class="token interpolation variable">$sex</span>, voice:<span class="token interpolation variable">$voice</span>&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//继承 : 类名(参一,参二)</span>
+<span class="token keyword">class</span> <span class="token function">girl</span><span class="token punctuation">(</span>name<span class="token operator">:</span> String<span class="token punctuation">,</span> sex<span class="token operator">:</span> String<span class="token punctuation">,</span> voice<span class="token operator">:</span> String<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">person</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> sex<span class="token punctuation">,</span> voice<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">val</span> mygirl<span class="token operator">:</span> girl <span class="token operator">=</span> <span class="token function">girl</span><span class="token punctuation">(</span><span class="token string">&quot;涂山苏苏&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;女狐妖&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;甜美\&quot;:道士哥哥,这是给你的五彩棒~\&quot;&quot;</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>mygirl <span class="token keyword">is</span> person<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>打印结果</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code>new a girl<span class="token punctuation">,</span> name<span class="token operator">:</span>涂山苏苏<span class="token punctuation">,</span> sex<span class="token operator">:</span>女狐妖<span class="token punctuation">,</span> voice<span class="token operator">:</span>甜美<span class="token string">&quot;:道士哥哥,这是给你的五彩棒~&quot;</span>
+<span class="token boolean">true</span>
+</code></pre></div> <br> <h3 id="空类型"><a href="#空类型" class="header-anchor">#</a> 空类型</h3> <p>任意类型都有可空和不可空两种</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">val</span> notNull <span class="token operator">:</span> String <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment">//错误.不能为空</span>
+<span class="token keyword">val</span> nullable <span class="token operator">:</span> String<span class="token operator">?</span> <span class="token operator">=</span> <span class="token keyword">null</span> <span class="token comment">//正确 .?表示可以为空</span>
+notNull<span class="token punctuation">.</span>length <span class="token comment">//正确.不为空的值可以直接使用</span>
+nullable<span class="token punctuation">.</span>length <span class="token comment">//错误.可能为空,不能直接获取长度</span>
+nullable<span class="token operator">!!</span><span class="token punctuation">.</span>length <span class="token comment">//正确.!!表示强制认定(我知道它不为空的意思)</span>
+nullable<span class="token operator">?</span><span class="token punctuation">.</span>length <span class="token comment">//正确.若为空,返回空.不为空返回长度</span>
+</code></pre></div> <br> <h3 id="智能类型转换"><a href="#智能类型转换" class="header-anchor">#</a> 智能类型转换</h3> <p>Java Style 类型转换</p> <div class="language-Kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">//类似于Java Style 类型转换.失败则抛异常</span>
+<span class="token keyword">val</span> student <span class="token operator">:</span> Student <span class="token operator">=</span> person <span class="token keyword">as</span> Student
+</code></pre></div><p>安全类型转换</p> <div class="language-Kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">//如果转换失败.返回null.不抛异常</span>
+<span class="token keyword">val</span> student <span class="token operator">:</span> Student<span class="token operator">?</span> <span class="token operator">=</span> person <span class="token keyword">as</span><span class="token operator">?</span> Student
+</code></pre></div><p>智能类型转换</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">//编译器尽可能的推导类型,避免无用的类型转换</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>person <span class="token keyword">is</span> Student<span class="token punctuation">)</span> person<span class="token punctuation">.</span><span class="token operator">&lt;</span>子类的成员<span class="token operator">&gt;</span>
+<span class="token comment">//因为nullable不为空.所以可以直接使用它的成员.不用强转</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>nullable <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> nullable<span class="token punctuation">.</span>length
+</code></pre></div> <br> <h3 id="包"><a href="#包" class="header-anchor">#</a> 包</h3> <br> <ol><li>就是命名空间</li> <li>包的声明必须在非注释代码的第一行</li></ol> <br> <h3 id="区间"><a href="#区间" class="header-anchor">#</a> 区间</h3> <br> <ul><li>一个数学区间,表示范围</li> <li>ClosedRange的子类,IntRange最常用</li> <li>基本写法
+<ul><li>0...100 表示[0,100]</li> <li>0 until 100 表示[1,100)不包含100</li> <li>10 in 1...100 表示判断10是否在[1,100]中</li></ul></li></ul> <div class="language-Kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">val</span> range<span class="token operator">:</span> IntRange <span class="token operator">=</span> <span class="token number">0</span><span class="token operator">..</span><span class="token number">1024</span> <span class="token comment">// [0, 1024]</span>
+<span class="token keyword">val</span> range_exclusive<span class="token operator">:</span> IntRange <span class="token operator">=</span> <span class="token number">0</span> until <span class="token number">1024</span> <span class="token comment">// [0, 1024) = [0, 1023]</span>
+
+<span class="token keyword">val</span> emptyRange<span class="token operator">:</span> IntRange <span class="token operator">=</span> <span class="token number">0</span><span class="token operator">..</span><span class="token operator">-</span><span class="token number">1</span>
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>emptyRange<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>range<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token number">50</span> <span class="token keyword">in</span> range<span class="token punctuation">)</span>
+<span class="token comment">//for循环的写法</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token keyword">in</span> range_exclusive<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;<span class="token interpolation variable">$i</span>, &quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div> <br> <h3 id="数组"><a href="#数组" class="header-anchor">#</a> 数组</h3> <p>数组即一些列的对象</p> <p>基本写法</p> <div class="language-Kotlin extra-class"><pre class="language-kotlin"><code><span class="token comment">//String即元素类型 自己想放什么类型就可以放什么类型</span>
+<span class="token keyword">val</span> array <span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token function">ArrayOf</span><span class="token punctuation">(</span><span class="token string">&quot;我&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;是&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;码农&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><p>示例代码</p> <div class="language-Kotlin extra-class"><pre class="language-kotlin"><code><span class="token keyword">val</span> arrayOfInt<span class="token operator">:</span> IntArray <span class="token operator">=</span> <span class="token function">intArrayOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>
+<span class="token keyword">val</span> arrayOfChar<span class="token operator">:</span> CharArray <span class="token operator">=</span> <span class="token function">charArrayOf</span><span class="token punctuation">(</span><span class="token string">'H'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">,</span> <span class="token string">'l'</span><span class="token punctuation">,</span> <span class="token string">'l'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'W'</span><span class="token punctuation">,</span> <span class="token string">'o'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> <span class="token string">'l'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">)</span>
+<span class="token keyword">val</span> arrayOfString<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token string">&quot;一&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;个&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;码农&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">val</span> arrayOfInts<span class="token operator">:</span> Array<span class="token operator">&lt;</span>Int<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>args<span class="token operator">:</span> Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>arrayOfInt<span class="token punctuation">.</span>size<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int <span class="token keyword">in</span> arrayOfInt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">//输出第i个成员</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>int<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>arrayOfChar<span class="token punctuation">.</span><span class="token function">joinToString</span><span class="token punctuation">(</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">//数组切片1...2即取索引为1,2的元素</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>arrayOfInt<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">..</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>打印结果</p> <div class="language-kotlin extra-class"><pre class="language-kotlin"><code><span class="token number">4</span>
+<span class="token number">1</span>
+<span class="token number">3</span>
+<span class="token number">5</span>
+<span class="token number">7</span>
+HelloWorld
+<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+
+</code></pre></div></div></article> <div class="content edit-link"><br> <a href="https://github.com/your_user/your_docs_repo/edit/master/kotlin-基础知识.md" target="_blank" rel="noopener noreferrer"> </a></div> <!----></div></div></div> <center><hr width="50%"> <span id="subtitle">&quot;Someday&quot;sounds a lot like the thing people say when they actually mean &quot;Never&quot;. </span> <div class="row"><div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10"><p class="small">© 2021 litton ishir. Code released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p></div></div></center></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5b687ac1.js" defer></script><script src="/assets/js/3.9a559813.js" defer></script><script src="/assets/js/33.bebc1ba6.js" defer></script>
+  </body>
+</html>
